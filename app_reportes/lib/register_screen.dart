@@ -18,13 +18,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
   final TextEditingController _passwordController = TextEditingController();
   final TextEditingController _confirmPasswordController = TextEditingController();
 
-  //Validar email 
+  // validar email 
   bool _isValidEmail(String email) {
     final emailRegExp = RegExp(r'^[^@]+@[^@]+\.[^@]+$');
     return emailRegExp.hasMatch(email);
   }
 
-  //Validar telefonoo
+  //  validar telefonoo
   bool _isValidPhone(String phone) {
     final phoneRegExp = RegExp(r'^\d{10}$');
     return phoneRegExp.hasMatch(phone);
@@ -80,7 +80,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 obscureText: true,
                 controller: _passwordController,
               ),
-              const SizedBox(height: 16),
+              const SizedBox(height: 30),
 
               CustomInput(
                 labelText: 'Confirmar Contraseña',
@@ -140,7 +140,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     ),
                   );
                 },
-                colorFondo: Color.fromRGBO(132, 0, 255, 1),
+                colorFondo: const Color.fromRGBO(132, 0, 255, 1),
                 colorTexto: Colors.white,
                 paddingHorizontal: 28,
                 paddingVertical: 12,
@@ -153,8 +153,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   Navigator.pop(context);
                 },
                 colorFondo: Colors.white,
-                colorTexto: Color.fromRGBO(132, 0, 255, 1),
-                colorBorde: Color.fromRGBO(132, 0, 255, 1),
+                colorTexto: const Color.fromRGBO(132, 0, 255, 1),
+                colorBorde: const Color.fromRGBO(132, 0, 255, 1),
                 paddingHorizontal: 40,
                 paddingVertical: 10,
               ),
